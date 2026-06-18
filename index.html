@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CyberShield Password Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        <span class="logo">🛡️</span>
+        CyberShield Pro
+    </h1>
+    <h2>Password Security Intelligence System</h2>
+    <p>
+        Analyze, Strengthen & Secure Your Passwords
+    </p>
+    <div class="badge">
+        🔒 Secure • Real-Time • Intelligent
+    </div>
+    <div class="version">
+        Version 1.0 • Internship Project
+    </div>
+    <div class="password-container">
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        onkeyup="analyzePassword()"
+    >
+
+    <button class="eye-btn"
+    onclick="togglePassword()">
+        👁
+    </button>
+</div>
+
+<div class="checklist">
+
+    <p id="len">❌ Minimum 8 Characters</p>
+
+    <p id="upper">❌ Uppercase Letter</p>
+
+    <p id="lower">❌ Lowercase Letter</p>
+
+    <p id="num">❌ Number</p>
+
+    <p id="special">❌ Special Character</p>
+
+</div>
+<div class="stats">
+    <div class="stat-card">
+        <h3 id="lengthValue">0</h3>
+        <p>Length</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="scoreValue">0%</h3>
+        <p>Security Score</p>
+    </div>
+</div>
+
+
+    <button onclick="generatePassword()">
+        Generate Strong Password
+    </button>
+    <button onclick="copyPassword()">
+        Copy Password
+    </button>
+
+    <div id="strength">
+        Strength: Not Analyzed Yet
+    </div>
+
+<div class="meter">
+    <div id="strengthBar"></div>
+</div>
+<div class="bar-labels">
+    <span>WEAK</span>
+    <span>MEDIUM</span>
+    <span>STRONG</span>
+</div>
+
+<div id="score"></div>
+
+<div id="lengthInfo"></div>
+
+<div id="securityLevel">
+    Estimated Security Level: Waiting for Analysis
+</div>
+
+<div id="suggestions">
+    Enter a password to begin security analysis.
+</div>
+
+<hr>
+
+<p class="footer">
+    🛡️ CyberShield © 2026 
+    Developed for Cybersecurity Internship Portfolio
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
